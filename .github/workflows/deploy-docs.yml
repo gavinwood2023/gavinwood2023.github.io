@@ -40,7 +40,7 @@ jobs:
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
-        uses: gavinwood2023.github.io
+        uses: gavinwood2023/gavinwood2023.github.io
         with:
           # 部署到 site 分支
           target_branch: site
