@@ -4,5 +4,4 @@ module.exports = {
     base: '/',
     host: '0.0.0.0',
     port: '8099',
-    dest: './dist',  // 打包文件夹
 }
