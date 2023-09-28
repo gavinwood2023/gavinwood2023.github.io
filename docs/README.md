@@ -1,39 +1,52 @@
-# Hello VuePress
+---
+home: true
+layout: BlogHome
+icon: home
+title: 首页
+heroImage: /logo.svg
+heroText: 你博客的名称
+heroFullScreen: true
+tagline: 你可以在这里放置你的口号与标语
+projects:
+#  - icon: project
+#    name: 项目名称
+#    desc: 项目详细描述
+#    link: https://你的项目链接
+#
+#  - icon: link
+#    name: 链接名称
+#    desc: 链接详细描述
+#    link: https://链接地址
+#
+#  - icon: book
+#    name: 书籍名称
+#    desc: 书籍详细描述
+#    link: https://你的书籍链接
+#
+#  - icon: article
+#    name: 文章名称
+#    desc: 文章详细描述
+#    link: https://你的文章链接
+#
+#  - icon: friend
+#    name: 伙伴名称
+#    desc: 伙伴详细介绍
+#    link: https://你的伙伴链接
+#
+#  - icon: /logo.svg
+#    name: 自定义项目
+#    desc: 自定义详细介绍
+#    link: https://你的自定义链接
 
-vuepress 2.x
-官网：https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85
+footer: 面向大海，春暖花开
+---
 
+[//]: # (这是一个博客主页的案例。)
 
-# VuePress2.0 + Github Actions部署到Github Pages教程
-参考教程：https://blog.csdn.net/weixin_43019353/article/details/130757392
+[//]: # ()
+[//]: # ()
+[//]: # (要使用此布局，你应该在页面前端设置 `layout: BlogHome` 和 `home: true`。)
 
-
-主题：
-https://theme-hope.vuejs.press/zh/
-
-<pre>
-.
-├── .github (可选的) → GitHub 配置文件存放路径
-│    └── workflow → GitHub 工作流配置
-│         └── docs-deploy.yml → 自动部署文档的工作流
-│
-├── docs → 文档文件夹
-│    │
-│    ├── .vuepress (可选的) → VuePress 配置文件夹
-│    │    │
-│    │    ├── dist (默认的) → 构建输出目录
-│    │    │
-│    │    ├── public (可选的) → 静态资源目录
-│    │    │
-│    │    ├── styles (可选的) → 用于存放样式相关的文件
-│    │    │
-│    │    ├── config.{js,ts} (可选的) → 配置文件的入口文件
-│    │    │
-│    │    └── client.{js,ts} (可选的) → 客户端文件
-│    │
-│    ├── ... → 其他项目文档
-│    │
-│    └── README.md → 项目主页
-│
-└── package.json → Nodejs 配置文件
-</pre>
+[//]: # ()
+[//]: # ()
+[//]: # (相关配置文档请见 [博客主页]&#40;https://theme-hope.vuejs.press/zh/guide/blog/home/&#41;。)

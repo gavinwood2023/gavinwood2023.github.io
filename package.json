@@ -4,13 +4,17 @@
   "description": "personal study notes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:update-package": "npx vp-update"
   },
   "author": "gavin wood",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.67"
+    "vuepress": "^2.0.0-beta.67",
+    "@vuepress/client": "2.0.0-beta.67",
+    "vue": "^3.3.4",
+    "vuepress-theme-hope": "2.0.0-beta.237"
   }
 }

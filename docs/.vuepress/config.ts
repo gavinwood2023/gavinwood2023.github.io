@@ -1,7 +1,17 @@
-module.exports = {
-    title: '我的技术站',
-    description: '描述：我的技术站',
-    base: '/',
+import { defineUserConfig } from "vuepress";
+import theme from "./theme.js";
+
+export default defineUserConfig({
+    base: "/",
     host: '0.0.0.0',
-    port: '8099',
-}
+    port: 8099,
+
+    lang: "zh-CN",
+    title: "博文分享",
+    description: "基于vuepress-theme-hope搭建的技术分享平台",
+
+    theme,
+
+    // Enable it with pwa
+    // shouldPrefetch: false,
+});
