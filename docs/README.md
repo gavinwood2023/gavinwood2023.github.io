@@ -1,9 +1,15 @@
 # Hello VuePress
 
+vuepress 2.x
+官网：https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85
+
 
 # VuePress2.0 + Github Actions部署到Github Pages教程
 参考教程：https://blog.csdn.net/weixin_43019353/article/details/130757392
 
+
+主题：
+https://theme-hope.vuejs.press/zh/
 
 <pre>
 .
