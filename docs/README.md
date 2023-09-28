@@ -1,5 +1,3 @@
 # Hello VuePress
 
-github action
-ss
-xx
+测试
