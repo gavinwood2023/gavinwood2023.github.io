@@ -17,10 +17,11 @@ export default sidebar({
             children: "structure",
         },
         {
-            text: "博客",
+            text: "笔记",
             icon: "blog",
             prefix: "blog/",
             link:"blog/",
+            collapsible: true, // 添加 collapsible 属性，使菜单项可折叠，false默认折叠，true默认展开
             children: "structure",
         },
         "intro",
