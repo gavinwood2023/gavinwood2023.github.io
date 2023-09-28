@@ -405,7 +405,7 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 					'default': 'Default',
 					'wide': 'Wide',
 					'tall': 'Tall',
-					'notes-only': 'Notes only'
+					'VuePress-only': 'Notes only'
 				};
 
 				setupLayout();
@@ -440,7 +440,7 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 					if( data.state ) delete data.state.overview;
 
 					// Messages sent by the notes plugin inside of the main window
-					if( data && data.namespace === 'reveal-notes' ) {
+					if( data && data.namespace === 'reveal-VuePress' ) {
 						if( data.type === 'connect' ) {
 							handleConnectMessage( data );
 						}
@@ -456,7 +456,7 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 					else if( data && data.namespace === 'reveal' ) {
 						if( /ready/.test( data.eventName ) ) {
 							// Send a message back to notify that the handshake is complete
-							window.opener.postMessage( JSON.stringify({ namespace: 'reveal-notes', type: 'connected'} ), '*' );
+							window.opener.postMessage( JSON.stringify({ namespace: 'reveal-VuePress', type: 'connected'} ), '*' );
 						}
 						else if( /slidechanged|fragmentshown|fragmenthidden|paused|resumed/.test( data.eventName ) && currentState !== JSON.stringify( data.state ) ) {
 
@@ -483,7 +483,7 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 					var callId = ++lastRevealApiCallId;
 					pendingCalls[callId] = callback;
 					window.opener.postMessage( JSON.stringify( {
-						namespace: 'reveal-notes',
+						namespace: 'reveal-VuePress',
 						type: 'call',
 						callId: callId,
 						methodName: methodName,
@@ -602,8 +602,8 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 				 */
 				function setupNotes() {
 
-					notes = document.querySelector( '.speaker-controls-notes' );
-					notesValue = document.querySelector( '.speaker-controls-notes .value' );
+					notes = document.querySelector( '.speaker-controls-VuePress' );
+					notesValue = document.querySelector( '.speaker-controls-VuePress .value' );
 
 				}
 
@@ -614,7 +614,7 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 				function setupHeartbeat() {
 
 					setInterval( () => {
-						window.opener.postMessage( JSON.stringify({ namespace: 'reveal-notes', type: 'heartbeat'} ), '*' );
+						window.opener.postMessage( JSON.stringify({ namespace: 'reveal-VuePress', type: 'heartbeat'} ), '*' );
 					}, 1000 );
 
 				}
@@ -935,5 +935,5 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 
 		<\/script>
 	</body>
-</html>`),!t)return void alert("Speaker view popup failed to open. Please make sure popups are allowed and reopen the speaker view.");(function(){const l=e.getConfig().url,a=typeof l=="string"?l:window.location.protocol+"//"+window.location.host+window.location.pathname+window.location.search;o=setInterval(function(){t.postMessage(JSON.stringify({namespace:"reveal-notes",type:"connect",state:e.getState(),url:a}),"*")},500),window.addEventListener("message",s)})()}}function i(l){let a=e.getCurrentSlide(),c=a.querySelectorAll("aside.notes"),u=a.querySelector(".current-fragment"),g={namespace:"reveal-notes",type:"state",notes:"",markdown:!1,whitespace:"normal",state:e.getState()};if(a.hasAttribute("data-notes")&&(g.notes=a.getAttribute("data-notes"),g.whitespace="pre-wrap"),u){let d=u.querySelector("aside.notes");d?(g.notes=d.innerHTML,g.markdown=typeof d.getAttribute("data-markdown")=="string",c=null):u.hasAttribute("data-notes")&&(g.notes=u.getAttribute("data-notes"),g.whitespace="pre-wrap",c=null)}c&&(g.notes=Array.from(c).map(d=>d.innerHTML).join(`
-`),g.markdown=c[0]&&typeof c[0].getAttribute("data-markdown")=="string"),t.postMessage(JSON.stringify(g),"*")}function s(l){if(function(a){try{return window.location.origin===a.source.location.origin}catch{return!1}}(l)){let a=JSON.parse(l.data);a&&a.namespace==="reveal-notes"&&a.type==="connected"?(clearInterval(o),r()):a&&a.namespace==="reveal-notes"&&a.type==="call"&&function(c,u,g){let d=e[c].apply(e,u);t.postMessage(JSON.stringify({namespace:"reveal-notes",type:"return",result:d,callId:g}),"*")}(a.methodName,a.arguments,a.callId)}}function r(){e.on("slidechanged",i),e.on("fragmentshown",i),e.on("fragmenthidden",i),e.on("overviewhidden",i),e.on("overviewshown",i),e.on("paused",i),e.on("resumed",i),i()}return{id:"notes",init:function(l){e=l,/receiver/i.test(window.location.search)||(window.location.search.match(/(\?|\&)notes/gi)!==null?n():window.addEventListener("message",a=>{if(!t&&typeof a.data=="string"){let u;try{u=JSON.parse(a.data)}catch{}u&&u.namespace==="reveal-notes"&&u.type==="heartbeat"&&(c=a.source,t&&!t.closed?t.focus():(t=c,window.addEventListener("message",s),r()))}var c}),e.addKeyBinding({keyCode:83,key:"S",description:"Speaker notes view"},function(){n()}))},open:n}};export{pt as default};
+</html>`),!t)return void alert("Speaker view popup failed to open. Please make sure popups are allowed and reopen the speaker view.");(function(){const l=e.getConfig().url,a=typeof l=="string"?l:window.location.protocol+"//"+window.location.host+window.location.pathname+window.location.search;o=setInterval(function(){t.postMessage(JSON.stringify({namespace:"reveal-VuePress",type:"connect",state:e.getState(),url:a}),"*")},500),window.addEventListener("message",s)})()}}function i(l){let a=e.getCurrentSlide(),c=a.querySelectorAll("aside.VuePress"),u=a.querySelector(".current-fragment"),g={namespace:"reveal-VuePress",type:"state",notes:"",markdown:!1,whitespace:"normal",state:e.getState()};if(a.hasAttribute("data-VuePress")&&(g.notes=a.getAttribute("data-VuePress"),g.whitespace="pre-wrap"),u){let d=u.querySelector("aside.VuePress");d?(g.notes=d.innerHTML,g.markdown=typeof d.getAttribute("data-markdown")=="string",c=null):u.hasAttribute("data-VuePress")&&(g.notes=u.getAttribute("data-VuePress"),g.whitespace="pre-wrap",c=null)}c&&(g.notes=Array.from(c).map(d=>d.innerHTML).join(`
+`),g.markdown=c[0]&&typeof c[0].getAttribute("data-markdown")=="string"),t.postMessage(JSON.stringify(g),"*")}function s(l){if(function(a){try{return window.location.origin===a.source.location.origin}catch{return!1}}(l)){let a=JSON.parse(l.data);a&&a.namespace==="reveal-VuePress"&&a.type==="connected"?(clearInterval(o),r()):a&&a.namespace==="reveal-VuePress"&&a.type==="call"&&function(c,u,g){let d=e[c].apply(e,u);t.postMessage(JSON.stringify({namespace:"reveal-VuePress",type:"return",result:d,callId:g}),"*")}(a.methodName,a.arguments,a.callId)}}function r(){e.on("slidechanged",i),e.on("fragmentshown",i),e.on("fragmenthidden",i),e.on("overviewhidden",i),e.on("overviewshown",i),e.on("paused",i),e.on("resumed",i),i()}return{id:"notes",init:function(l){e=l,/receiver/i.test(window.location.search)||(window.location.search.match(/(\?|\&)notes/gi)!==null?n():window.addEventListener("message",a=>{if(!t&&typeof a.data=="string"){let u;try{u=JSON.parse(a.data)}catch{}u&&u.namespace==="reveal-VuePress"&&u.type==="heartbeat"&&(c=a.source,t&&!t.closed?t.focus():(t=c,window.addEventListener("message",s),r()))}var c}),e.addKeyBinding({keyCode:83,key:"S",description:"Speaker VuePress view"},function(){n()}))},open:n}};export{pt as default};

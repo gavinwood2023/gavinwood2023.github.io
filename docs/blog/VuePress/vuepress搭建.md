@@ -1,0 +1,14 @@
+---
+title: VuePress搭建
+icon: pen-to-square
+# 一个页面可以有多个分类
+category:
+  - 博客
+article: true
+timeline: true
+dir:
+  index: true
+  order: 1
+---
+
+简短的记录

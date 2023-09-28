@@ -16,6 +16,13 @@ export default sidebar({
             prefix: "posts/",
             children: "structure",
         },
+        {
+            text: "博客",
+            icon: "blog",
+            prefix: "blog/",
+            link:"blog/",
+            children: "structure",
+        },
         "intro",
         "slides",
     ],
