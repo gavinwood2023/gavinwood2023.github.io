@@ -29,7 +29,7 @@ export default hopeTheme({
 
     footer: "默认页脚",
 
-    displayFooter: true,
+    displayFooter: false,
 
     blog: {
         description: "一个前端开发者",
