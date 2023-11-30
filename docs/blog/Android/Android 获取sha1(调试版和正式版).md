@@ -4,6 +4,9 @@ icon: pen-to-square
 # 一个页面可以有多个分类
 category:
   - android
+tag:
+  - android
+  - sha1
 article: true
 timeline: true
 dir:
