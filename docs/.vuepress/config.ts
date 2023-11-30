@@ -8,7 +8,7 @@ export default defineUserConfig({
     port: 8099,
 
     lang: "zh-CN",
-    title: "博文分享",
+    title: "乐见分享",
     description: "基于vuepress-theme-hope搭建的技术分享平台",
 
     theme,
