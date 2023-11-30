@@ -3,10 +3,10 @@ home: true
 layout: BlogHome
 icon: home
 title: 首页
-heroImage: /logo.svg
-heroText: 乐见分享
-heroFullScreen: true
-tagline: 可与言而不与之言，失人；不可与言而与之言，失言。知者不失人，亦不失言。
+#heroImage: /logo.svg
+#heroText: 乐见分享
+#heroFullScreen: true
+#tagline: 可与言而不与之言，失人；不可与言而与之言，失言。知者不失人，亦不失言。
 projects:
 #  - icon: project
 #    name: 项目名称
