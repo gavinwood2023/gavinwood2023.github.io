@@ -29,7 +29,7 @@ keytool -list -v -keystore C:\***\.android\debug.keystore
 ##### Mac和Linux
 此路径应该为~/.android/debug.keystore，示例：
 ```
-keytool -list -v -keystore /Users/**Custom Name**/.android/debug.keystore
+keytool -list -v -keystore /Users/Custom Name/.android/debug.keystore
 ```
 keystore的密码默认为**android**
 
