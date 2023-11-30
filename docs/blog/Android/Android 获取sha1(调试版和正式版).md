@@ -35,7 +35,7 @@ keystore的密码默认为**android**
 
 输出的结果：
 
-![20231130-101208.png](..%2F..%2Fimages%2Fandroid%2F20231130-101208.png)
+![20231130-101208.png](../../images/android/20231130-101208.png)
 
 #### 2.获取release（正式版）的sha1:
 ```
