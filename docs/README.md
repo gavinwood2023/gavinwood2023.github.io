@@ -4,9 +4,9 @@ layout: BlogHome
 icon: home
 title: 首页
 heroImage: /logo.svg
-heroText: 你博客的名称
+heroText: 乐见分享
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 可与言而不与之言，失人；不可与言而与之言，失言。知者不失人，亦不失言。
 projects:
 #  - icon: project
 #    name: 项目名称
