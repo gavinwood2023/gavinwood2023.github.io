@@ -56,4 +56,10 @@ footer: 面向大海，春暖花开
 
 1、执行 `npm run docs:build` 再提交
 
-2、认证：Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens
+2、设置个人访问令牌：
+
+Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens
+
+3、将新令牌更新到本地，切换到项目目录下执行
+
+`git remote set-url origin https://用户名:访问令牌@github.com/用户名/仓库名`
