@@ -51,3 +51,5 @@ footer: 面向大海，春暖花开
 [//]: # ()
 [//]: # ()
 [//]: # (相关配置文档请见 [博客主页]&#40;https://theme-hope.vuejs.press/zh/guide/blog/home/&#41;。)
+
+内容写完后执行 `npm run docs:build` 再提交
