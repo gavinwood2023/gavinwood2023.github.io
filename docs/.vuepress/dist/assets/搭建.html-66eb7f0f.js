@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,a as _}from"./app-eb286a54.js";const c={},s=_("p",null,"简短的记录",-1),n=[s];function r(a,l){return t(),o("div",null,n)}const m=e(c,[["render",r],["__file","搭建.html.vue"]]);export{m as default};
