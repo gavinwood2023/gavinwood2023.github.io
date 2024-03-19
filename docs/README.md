@@ -67,3 +67,5 @@ Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens
 4、仓库设置：
 
 Settings -> Actions -> General -> 设置 `Workflow permissions` 为 `Read and write permissions`
+
+Settings -> Secrets and variables -> Actions -> Repository secrets 添加一个ACCESS_TOKEN 输入 设置的个人访问令牌
