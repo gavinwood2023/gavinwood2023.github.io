@@ -64,6 +64,6 @@ Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens
 
 `git remote set-url origin https://用户名:访问令牌@github.com/用户名/仓库名`
 
-4、仓库设置：有效期只有90天，可能到期后需要重新设置
+4、仓库设置：
 
 Settings -> Actions -> General -> 设置 `Workflow permissions` 为 `Read and write permissions`
