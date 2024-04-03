@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as c,c as n,a as e,b as o}from"./app-eb286a54.js";const s={},r=e("p",null,[o("内容写完后执行 "),e("code",null,"npm run docs:build"),o(" 再提交")],-1),_=[r];function a(l,d){return c(),n("div",null,_)}const u=t(s,[["render",a],["__file","index.html.vue"]]);export{u as default};
