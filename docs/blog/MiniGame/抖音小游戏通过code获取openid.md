@@ -16,7 +16,6 @@ dir:
 服务器PHP代码
 ```php
 <?php
-
 // 替换成你的小游戏 App Key 和 App Secret
 $app_key = '******';
 $app_secret = '******';
