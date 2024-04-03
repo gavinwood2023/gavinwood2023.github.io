@@ -51,7 +51,6 @@ echo $response;
 
 // 关闭 cURL 句柄
 curl_close($ch);
-
 ?>
 
 ```
