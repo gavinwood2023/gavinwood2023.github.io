@@ -31,7 +31,7 @@ func _init(p_name: String, p_path: String):
 
 ```
 
-#### 2、`UIManager.gd` 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](%28一29%：创建单例自动加载.md)
+#### 2、`UIManager.gd` 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](\(一\)：创建单例自动加载.md)
 ``` UIManager.gd
 extends Node
 
