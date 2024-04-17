@@ -17,7 +17,7 @@ dir:
 4、可以切换场景
 
 ### 实现
-#### 1、UIPanelItem.gd 定义一个面板/场景格式，包含一个名字和路径
+#### 1、`UIPanelItem.gd` 定义一个面板/场景格式，包含一个名字和路径
 ``` UIPanelItem.gd
 class_name UIPanelItem
 
@@ -31,7 +31,7 @@ func _init(p_name: String, p_path: String):
 
 ```
 
-#### 2、UIManager.gd 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](%28%E4%B8%80%29%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%8D%95%E4%BE%8B%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD.md)
+#### 2、`UIManager.gd` 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](%28一29%：创建单例自动加载.md)
 ``` UIManager.gd
 extends Node
 
