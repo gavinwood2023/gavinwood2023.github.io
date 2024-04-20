@@ -83,4 +83,5 @@ dir:
 `
 {project} --goto {file}:{line}:{col}
 `
+
 完成后，双击脚本即可用VSCode打开
