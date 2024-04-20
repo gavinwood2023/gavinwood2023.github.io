@@ -131,7 +131,7 @@ func _deferred_goto_scene(path):
 ##### 1、新建Test01.tscn和Test02.tscn场景
 
 Test01.tscn
-![UiManager01.png](../../images/godot_v4/UiManager01.png)
+![UiManager01.png](../../../images/godot_v4/practice/UiManager01.png)
 
 Test02.tscn
 
