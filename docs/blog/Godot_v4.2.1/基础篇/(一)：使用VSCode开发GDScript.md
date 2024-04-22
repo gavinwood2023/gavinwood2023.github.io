@@ -11,7 +11,7 @@ dir:
   order: 1
 ---
 
-### VSCode设置：
+#### VSCode设置：
 
 1、VSCode中下载godot-tool插件
 
@@ -63,7 +63,7 @@ dir:
 ```
 完成以上设置，则可以直接在`VSCode`中`F5`运行`godot`项目
 
-### Godot设置：
+#### Godot设置：
 实现：双击gd脚本，用VSCode打开
 
 编辑器->编辑器设置->文本编辑器->外部
