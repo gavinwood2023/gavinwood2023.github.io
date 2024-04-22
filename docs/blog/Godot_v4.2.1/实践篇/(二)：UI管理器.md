@@ -10,14 +10,14 @@ dir:
   index: true
   order: 2
 ---
-### 需求
+#### 需求
 1、任何场景或界面，可以直接调用UiManager中的方法
 2、可以添加面板/场景，如果有_on_open方法则调用，并可传入任意参数
 3、可以移除面板/场景，如果有_on_close方法则调用
 4、可以切换场景
 
-### 实现
-#### 1、`UIPanelItem.gd` 定义一个面板/场景格式，包含一个名字和路径
+#### 实现
+##### 1、`UIPanelItem.gd` 定义一个面板/场景格式，包含一个名字和路径
 ``` UIPanelItem.gd
 class_name UIPanelItem
 
@@ -31,7 +31,7 @@ func _init(p_name: String, p_path: String):
 
 ```
 
-#### 2、`UIManager.gd` 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](\(一\)：创建单例自动加载.md)
+##### 2、`UIManager.gd` 设置为单例自动加载，名字为UiManager，[如何设置请参考 (一)：创建单例自动加载.md](\(一\)：创建单例自动加载.md)
 ``` UIManager.gd
 extends Node
 
