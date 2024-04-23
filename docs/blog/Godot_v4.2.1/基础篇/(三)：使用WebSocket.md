@@ -28,7 +28,7 @@ npm init -y
 npm install ws
 ```
 3、创建一个名为 server.js 的文件，并添加以下代码：
-```angular2html
+```
 const WebSocket = require('ws');
 
 // 创建WebSocket服务器，监听在端口8080
