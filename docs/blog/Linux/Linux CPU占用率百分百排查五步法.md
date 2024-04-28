@@ -1,5 +1,6 @@
 ---
 title: CPU使用率百分之百100排查五步法
+order: 1
 icon: pen-to-square
 # 一个页面可以有多个分类
 category:
