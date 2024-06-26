@@ -113,7 +113,7 @@ class AndroidExportPlugin extends EditorExportPlugin:
 
 10、选择`项目`->`安装Android构建模板`
 
-11、选择`项目`->`项目设置`->`插件`->`启用`
+11、将插件下的`addone`目录，复制到项目目录下，选择`项目`->`项目设置`->`插件`->`启用`
 ![android_plugin03](../../../images/godot_v4/base/android_plugin03.png)
 
 12、打包测试，
@@ -122,3 +122,27 @@ class AndroidExportPlugin extends EditorExportPlugin:
 13、解决apk包体问题：
 
 打开`android/build/AndroidManifest.xml`,在`application`标签内添加`android:extractNativeLibs="true"`
+
+14、补充`GodotAndroidPlugin`代码，获取手机MCC
+打包时需要`Read Phone State`权限
+```
+    @UsedByGodot
+    private fun showToast(str: String) {
+        runOnUiThread {
+            Toast.makeText(activity, str, Toast.LENGTH_LONG).show()
+            Log.v(pluginName, str)
+        }
+    }
+
+    @UsedByGodot
+    private fun getMcc(): Int {
+        var mcc = -1
+        val telephonyManager = activity?.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+        val networkOperator = telephonyManager.networkOperator
+        if (!TextUtils.isEmpty(networkOperator)) {
+            mcc = networkOperator.substring(0, 3).toInt()
+        }
+        Log.i("NetworkOperatorMCC:", "" + mcc)
+        return mcc
+    }
+```
