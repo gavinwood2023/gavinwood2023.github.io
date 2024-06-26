@@ -123,8 +123,9 @@ class AndroidExportPlugin extends EditorExportPlugin:
 
 打开`android/build/AndroidManifest.xml`,在`application`标签内添加`android:extractNativeLibs="true"`
 
+
 14、补充`GodotAndroidPlugin`代码，获取手机MCC
-打包时需要`Read Phone State`权限
+~~打包时需要`Read Phone State`权限~~
 ```
     @UsedByGodot
     private fun showToast(str: String) {
