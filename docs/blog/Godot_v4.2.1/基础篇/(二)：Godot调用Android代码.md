@@ -147,3 +147,53 @@ class AndroidExportPlugin extends EditorExportPlugin:
         return mcc
     }
 ```
+跳转到网页
+```
+@UsedByGodot
+private fun openLink(url: String){
+    runOnUiThread {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        activity?.startActivity(intent)
+    }
+}
+
+```
+
+复制文本到粘贴板；从粘贴板获取文本
+```
+@UsedByGodot
+private fun copyStr2Clipboard(str: String){
+    var clipManager = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
+    val myClip = ClipData.newPlainText("text", str)
+    clipManager.setPrimaryClip(myClip)
+}
+
+@UsedByGodot
+private fun getStr4Clipboard(): String{
+    var result = "";
+    var clipboardManager = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
+    // 检查剪贴板是否有内容
+    if (clipboardManager.hasPrimaryClip()) {
+        // 获取剪贴板的内容
+        val clip = clipboardManager.primaryClip
+        // 确保剪贴板内容不为空且有至少一条剪贴板内容
+        if (clip != null && clip.itemCount > 0) {
+            // 获取第一条剪贴板内容
+            val clipItem = clip.getItemAt(0)
+            // 将剪贴板内容转换为字符串
+            val clipText = clipItem.text?.toString()
+            // 判断剪贴板内容是否为空
+            if (clipText.isNullOrEmpty()) {
+                println("剪贴板内容为空")
+            } else {
+                result = clipText;
+            }
+        } else {
+            println("剪贴板为空或无内容")
+        }
+    }
+    return result;
+}
+
+```
