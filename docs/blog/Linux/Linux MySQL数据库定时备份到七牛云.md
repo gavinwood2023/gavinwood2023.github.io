@@ -20,7 +20,7 @@ dir:
 
 
 ### 实现
-#### 一、编写数据备份脚本，上传到七牛云 `backup_mysql.sh`，并设置执行权限`chmod +x backup_mysql.sh`
+#### 一、编写数据备份脚本，上传到七牛云 `/usr/local/bin/backup_mysql.sh`，位置可随意，并设置执行权限`chmod +x backup_mysql.sh`
 ```
 #!/bin/bash
 
@@ -70,6 +70,8 @@ fi
 
 `0 3 * * * /usr/local/bin backup_mysql.sh`
 
+1）、/usr/local/bin： 脚本文件所在的路径
+
 查看`crontab`设置:
 
 `crontab -l`
@@ -108,7 +110,7 @@ fi
 
 2）、your_bucket_domain： 桶外链域名
 
-6、使用 `qshell` 工具的 `rput` 命令将文件上传到七牛云。
+##### 6、使用 `qshell` 工具的 `rput` 命令将文件上传到七牛云。
 
 #### 四、验证备份和上传
 ##### 运行脚本以确保备份和上传过程正常工作：
